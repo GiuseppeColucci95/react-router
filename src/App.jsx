@@ -3,7 +3,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 
 import Home from "./pages/Home";
 import Posts from "./pages/Posts";
-import ContactUs from "./pages/ContactUs";
+import AboutUs from "./pages/AboutUs";
 
 export default function App() {
 
@@ -13,8 +13,8 @@ export default function App() {
         <Routes>
           <Route Component={DefaultLayout}>
             <Route path="/" Component={Home}></Route>
-            <Route path="/contacts" Component={Home}></Route>
-            <Route path="/posts" Component={Home}></Route>
+            <Route path="/about" Component={AboutUs}></Route>
+            <Route path="/posts" Component={Posts}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 export default function Header() {
 
   return (
@@ -18,18 +19,10 @@ export default function Header() {
             </button>
             <div className="collapse navbar-collapse" id="collapsibleNavId">
               <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
-                <li className="nav-item">
-                  <a className="nav-link active" href="#" aria-current="page">Home
-                    <span className="visually-hidden">(current)</span></a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">About Us</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Post List</a>
-                </li>
+                <NavLink className="nav-link" to={'/'}>Home</NavLink >
+                <NavLink className="nav-link" to={'/about'}>About Us</NavLink >
+                <NavLink className="nav-link" to={'/posts'}>Posts</NavLink >
               </ul>
-
             </div>
           </div>
         </nav>
