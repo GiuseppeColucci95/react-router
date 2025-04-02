@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const posts = [
   {
@@ -54,15 +54,25 @@ export default function Post() {
 
   const { id } = useParams();
   const foundPost = posts.find(post => Number(post.id) === Number(id));
-  console.log(foundPost);
 
+  const navigate = useNavigate();
 
   return (
     <>
       <div className="container d-flex flex-column align-items-center my-5">
         <h1>{foundPost.title}</h1>
-        <img className="w-50 my-5" src={`/${foundPost.image}`} alt={foundPost.title} />
-        <p className="w-75" >{foundPost.content}</p>
+        <div className=" w-100 d-flex align-items-center justify-content-between">
+          {
+            (id > 1) ? (<button className="btn btn-warning" onClick={() => navigate(`/posts/${id - 1}`)}>Indietro</button>)
+              : (<button disabled className="btn btn-warning ">Indietro</button>)
+          }
+          <img className="w-75 my-5" src={`/${foundPost.image}`} alt={foundPost.title} />
+          {
+            (id < (posts.length)) ? (<button className="btn btn-warning" onClick={() => navigate(`/posts/${Number(id) + 1}`)}>Avanti</button>)
+              : (<button disabled className="btn btn-warning ">Avanti</button>)
+          }
+        </div>
+        <p>{foundPost.content}</p>
       </div>
     </>
   );
