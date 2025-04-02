@@ -37,13 +37,13 @@ export default function Post() {
               <h1>{post.title}</h1>
               <div className="w-100 d-flex align-items-center justify-content-between">
                 {
-                  (id > 1) ? (<button className="btn btn-warning" onClick={() => navigate(`/posts/${id - 1}`)}>Indietro</button>)
-                    : (<button disabled className="btn btn-warning ">Indietro</button>)
+                  (id > 1) ? (<button className="btn btn-warning px-4" onClick={() => navigate(`/posts/${id - 1}`)}><i className="bi bi-arrow-left"></i></button>)
+                    : (<button disabled className="btn btn-warning px-4"><i class="bi bi-arrow-left"></i></button>)
                 }
                 <img className="border border-3 border-dark rounded-3 w-75 my-5" src={`/${post.image}`} alt={post.title} />
                 {
-                  (id < posts.length) ? (<button className="btn btn-warning" onClick={() => navigate(`/posts/${Number(id) + 1}`)}>Avanti</button>)
-                    : (<button disabled className="btn btn-warning">Avanti</button>)
+                  (id < posts.length) ? (<button className="btn btn-warning px-4" onClick={() => navigate(`/posts/${Number(id) + 1}`)}><i className="bi bi-arrow-right"></i></button>)
+                    : (<button disabled className="btn btn-warning px-4"><i class="bi bi-arrow-right"></i></button>)
                 }
               </div>
               <p>{post.content}</p>
