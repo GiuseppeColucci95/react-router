@@ -66,7 +66,7 @@ export default function Post() {
             (id > 1) ? (<button className="btn btn-warning" onClick={() => navigate(`/posts/${id - 1}`)}>Indietro</button>)
               : (<button disabled className="btn btn-warning ">Indietro</button>)
           }
-          <img className="w-75 my-5" src={`/${foundPost.image}`} alt={foundPost.title} />
+          <img className="border border-3 border-dark rounded-3 w-75 my-5" src={`/${foundPost.image}`} alt={foundPost.title} />
           {
             (id < (posts.length)) ? (<button className="btn btn-warning" onClick={() => navigate(`/posts/${Number(id) + 1}`)}>Avanti</button>)
               : (<button disabled className="btn btn-warning ">Avanti</button>)

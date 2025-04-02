@@ -64,7 +64,7 @@ export default function Posts() {
                   <Link className="text-decoration-none" to={`/posts/${post.id}`}>
                     <div className="card h-100">
                       <div className="card-img-top">
-                        <img className="img-fluid" src={post.image} alt={post.title} />
+                        <img className="w-100" src={post.image} alt={post.title} />
                       </div>
                       <div className="card-body">
                         <h5>{post.title}</h5>
