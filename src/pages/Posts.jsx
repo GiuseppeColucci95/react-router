@@ -1,18 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { usePosts } from "../contexts/PostsContext";
+
 
 export default function Posts() {
 
-  const [posts, setPosts] = useState([]);
+  const { posts } = usePosts();
+  console.log(posts);
 
-  useEffect(() => {
-    fetch(`http://localhost:3000/posts`)
-      .then(res => res.json())
-      .then(data => {
-        setPosts(data);
-      })
-  }, []);
+
 
   return (
     <>

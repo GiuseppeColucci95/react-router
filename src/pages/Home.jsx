@@ -4,12 +4,12 @@ export default function Home() {
     <>
       <main>
         <div className="p-5 mb-4 bg-light rounded-3">
-          <div class="container-fluid py-5">
-            <h1 class="display-5 fw-bold">Jumbotron</h1>
-            <p class="col-md-8 fs-4">
+          <div className="container-fluid py-5">
+            <h1 className="display-5 fw-bold">Jumbotron</h1>
+            <p className="col-md-8 fs-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolore, quod quibusdam voluptatem nobis in. Suscipit ut iusto vitae velit, soluta inventore hic quas excepturi vero sed ea sunt fugit. Quae, ducimus magnam. Facere inventore, animi odit eaque voluptatum ut eos quam corporis accusamus, nulla rem ex labore officia eveniet.
             </p>
-            <button class="btn btn-primary btn-lg" type="button">
+            <button className="btn btn-primary btn-lg" type="button">
               Button
             </button>
           </div>
